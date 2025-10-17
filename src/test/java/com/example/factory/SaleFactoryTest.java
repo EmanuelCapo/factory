@@ -4,7 +4,7 @@ import com.example.factory.classes.ChileSale;
 import com.example.factory.classes.MexicoSale;
 import com.example.factory.classes.dto.SaleRequest;
 import com.example.factory.classes.dto.SaleResponse;
-import com.example.factory.classes.BazilSale;
+import com.example.factory.classes.BrazilSale;
 import com.example.factory.factory.SaleFactory;
 import com.example.factory.interfaces.Sale;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,7 +39,7 @@ public class SaleFactoryTest {
         Sale saleBR = saleFactory.getSaleByCountry("BR");
 
         assertNotNull(saleBR);
-        assertInstanceOf(BazilSale.class, saleBR);
+        assertInstanceOf(BrazilSale.class, saleBR);
         double baseAmount = 100.0;
         double resultBR = saleBR.calculatePriceWithVAT(baseAmount);
         double expectedResultBR = 112.0;

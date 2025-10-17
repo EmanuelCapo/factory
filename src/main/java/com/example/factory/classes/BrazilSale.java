@@ -4,7 +4,7 @@ import com.example.factory.interfaces.Sale;
 import org.springframework.stereotype.Component;
 
 @Component("BR")
-public class BazilSale implements Sale {
+public class BrazilSale implements Sale {
 
     private final double vatRate = 0.12;
 
